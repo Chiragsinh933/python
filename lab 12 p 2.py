@@ -1,0 +1,21 @@
+
+import numpy as np
+import matplotlib.pyplot as plt
+
+fs = 500            
+duration = 2        
+t = np.linspace(0, duration, int(fs * duration), endpoint=False)
+
+sine_wave = np.sin(2 * np.pi * 5 * t)        
+cosine_wave = np.cos(2 * np.pi * 10 * t)     
+
+
+product_signal = sine_wave * cosine_wave
+
+plt.figure(figsize=(10, 4))
+plt.plot(t, product_signal)
+plt.title('Product of 5 Hz Sine and 10 Hz Cosine Waves')
+plt.xlabel('Time (s)')
+plt.ylabel('Amplitude')
+plt.grid(True)
+plt.show()
